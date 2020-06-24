@@ -1,0 +1,21 @@
+﻿<ul class="nav shadow px-2 py-1 rounded">
+    @foreach (var item in Tabs)
+    {
+        <li class="nav-item" @onclick="@(()=> SelectTab(item))">
+            <a class="nav-link rounded @TextClass @(SelectedTab == item ? ActiveClass : string.Empty)" href="#" @onclick:preventDefault>@item</a>
+        </li>
+    }
+</ul>
+@code {
+    [Parameter] public string SelectedTab { get; set; }
+    [Parameter] public string TextClass { get; set; } = "m-nav-link";
+    [Parameter] public IEnumerable<string> Tabs { get; set; }
+    [Parameter] public EventCallback<string> SelectedTabChanged { get; set; }
+    [Parameter] public string ActiveClass { get; set; } = "active";
+    private void SelectTab(string tab)
+    {
+        if (SelectedTab == tab) return;
+        SelectedTab = tab;
+        SelectedTabChanged.InvokeAsync(SelectedTab);
+    }
+}

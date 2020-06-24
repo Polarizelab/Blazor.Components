@@ -1,0 +1,50 @@
+﻿/*
+    This file is to show how CSS and other static resources (such as images) can be
+    used from a library project/package.
+*/
+@import url("bootstrap.min.css");
+@import url("css/all.min.css");
+
+.btn-primary, .btn-outline-primary {
+    box-shadow: 0 19px 38px rgba(0, 123, 255, 0.3), 0 15px 12px rgba(0, 123, 255, 0.22);
+}
+
+.btn-secondary, .btn-outline-secondary {
+    box-shadow: 0 19px 38px rgba(108, 117, 125, 0.3), 0 15px 12px rgba(108, 117, 125, 0.22);
+}
+
+.btn-success, .btn-outline-success {
+    box-shadow: 0 19px 38px rgba(40, 167, 69, 0.3), 0 15px 12px rgba(40, 167, 69, 0.22);
+}
+
+.btn-danger, .btn-outline-danger {
+    box-shadow: 0 19px 38px rgba(220, 53, 69, 0.3), 0 15px 12px rgba(220, 53, 69, 0.22);
+}
+
+.btn-warning, .btn-outline-warning {
+    box-shadow: 0 19px 38px rgba(255, 193, 7, 0.3), 0 15px 12px rgba(255, 193, 7, 0.22);
+}
+
+.btn-info, .btn-outline-info {
+    box-shadow: 0 19px 38px rgba(23, 162, 184, 0.3), 0 15px 12px rgba(23, 162, 184, 0.22);
+}
+
+.btn-light, .btn-outline-light {
+    box-shadow: 0 19px 38px rgba(248, 249, 250, 0.3), 0 15px 12px rgba(248, 249, 250, 0.22);
+}
+
+.btn-dark, .btn-outline-dark {
+    box-shadow: 0 19px 38px rgba(52, 58, 64, 0.3), 0 15px 12px rgba(52, 58, 64, 0.22);
+}
+
+a.nav-link.active {
+    background-color: var(--primary);
+}
+
+a.m-nav-link {
+    color: var(--dark);
+}
+
+a.m-nav-link.active {
+    color: var(--light);
+}

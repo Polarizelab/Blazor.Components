@@ -1,0 +1,18 @@
+﻿@inherits ButtonBase
+<button class="btn @GetButtonTypeClass() @GetButtonSizeClass() @Classes @(Stretch ? "btn-block" : string.Empty)" type="@GetButtonType()" @attributes="Attributes" @onclick="OnClick" disabled="@(!IsEnabled)">@Text</button>
+@code {
+    private string GetButtonTypeClass()
+     => Style switch
+     {
+         ButtonStyle.Primary => "btn-outline-primary",
+         ButtonStyle.Secondary => "btn-outline-secondary",
+         ButtonStyle.Success => "btn-outline-success",
+         ButtonStyle.Danger => "btn-outline-danger",
+         ButtonStyle.Warning => "btn-outline-warning",
+         ButtonStyle.Info => "btn-outline-info",
+         ButtonStyle.Light => "btn-outline-light",
+         ButtonStyle.Dark => "btn-outline-dark",
+         ButtonStyle.Link => "btn-outline-link",
+         _ => string.Empty
+     };
+}
