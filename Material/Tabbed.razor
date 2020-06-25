@@ -1,4 +1,4 @@
-﻿<ul class="nav shadow px-2 py-1 rounded">
+﻿<ul class="nav shadow px-2 py-1 rounded @TabbedClass">
     @foreach (var item in Tabs)
     {
         <li class="nav-item" @onclick="@(()=> SelectTab(item))">
@@ -8,10 +8,11 @@
 </ul>
 @code {
     [Parameter] public string SelectedTab { get; set; }
+    [Parameter] public string TabbedClass { get; set; }
     [Parameter] public string TextClass { get; set; } = "m-nav-link";
     [Parameter] public IEnumerable<string> Tabs { get; set; }
     [Parameter] public EventCallback<string> SelectedTabChanged { get; set; }
-    [Parameter] public string ActiveClass { get; set; } = "active";
+    [Parameter] public string ActiveClass { get; set; } = "active m-shadow-primary";
     private void SelectTab(string tab)
     {
         if (SelectedTab == tab) return;

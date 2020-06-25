@@ -1,0 +1,40 @@
+﻿<div class="px-3 py-1 border rounded-pill text-center m-chip bg-white @GetStyleClass() @ChipClass @(IsSelected ? SelectedClass :string.Empty)" @onclick="@(()=> Select())">
+    @if (IsSelected)
+    {
+        @LeftIcon
+    }
+    @ChildContent
+    @if (IsSelected)
+    {
+        @RightIcon
+    }
+</div>
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public string ChipClass { get; set; }
+    [Parameter] public bool IsSelected { get; set; }
+    [Parameter] public EventCallback<bool> IsSelectedChanged { get; set; }
+    [Parameter] public string SelectedClass { get; set; } = "bg-primary text-white";
+    [Parameter] public Style Style { get; set; } = Style.Primary;
+    [Parameter] public RenderFragment LeftIcon { get; set; }
+    [Parameter] public RenderFragment RightIcon { get; set; }
+    private string GetStyleClass()
+    => Style switch
+    {
+        Style.Primary => "border-primary m-chip-primary",
+        Style.Secondary => "border-secondary m-chip-secondary",
+        Style.Success => "border-success m-chip-success",
+        Style.Danger => "border-danger m-chip-danger",
+        Style.Warning => "border-warning m-chip-warning",
+        Style.Info => "border-info m-chip-info",
+        Style.Light => "border-light m-chip-light",
+        Style.Dark => "border-dark m-chip-dark",
+        _ => string.Empty
+    };
+    private void Select()
+    {
+        IsSelected = !IsSelected;
+        IsSelectedChanged.InvokeAsync(IsSelected);
+    }
+}

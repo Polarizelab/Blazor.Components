@@ -6,8 +6,8 @@ namespace Polarizelab.Blazor.Components.Material
 {
     public enum ButtonSize
     {
-        Large,
         Normal,
+        Large,
         Small
     }
 }

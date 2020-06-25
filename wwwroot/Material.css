@@ -40,11 +40,70 @@
 a.nav-link.active {
     background-color: var(--primary);
 }
+.m-shadow-primary {
+    box-shadow: 0 19px 38px rgba(0, 123, 255, 0.3), 0 15px 12px rgba(0, 123, 255, 0.22);
+}
+.m-shadow-dark {
+    box-shadow: 0 19px 38px rgba(52, 58, 64, 0.3), 0 15px 12px rgba(52, 58, 64, 0.22);
+}
 
+.m-shadow-secondary {
+    box-shadow: 0 19px 38px rgba(108, 117, 125, 0.3), 0 15px 12px rgba(108, 117, 125, 0.22);
+}
+
+.m-shadow-success {
+    box-shadow: 0 19px 38px rgba(40, 167, 69, 0.3), 0 15px 12px rgba(40, 167, 69, 0.22);
+}
+
+.m-shadow-danger {
+    box-shadow: 0 19px 38px rgba(220, 53, 69, 0.3), 0 15px 12px rgba(220, 53, 69, 0.22);
+}
+
+.m-shadow-warning {
+    box-shadow: 0 19px 38px rgba(255, 193, 7, 0.3), 0 15px 12px rgba(255, 193, 7, 0.22);
+}
+
+.m-shadow-info {
+    box-shadow: 0 19px 38px rgba(23, 162, 184, 0.3), 0 15px 12px rgba(23, 162, 184, 0.22);
+}
+
+.m-shadow-light {
+    box-shadow: 0 19px 38px rgba(248, 249, 250, 0.3), 0 15px 12px rgba(248, 249, 250, 0.22);
+}
 a.m-nav-link {
     color: var(--dark);
 }
 
 a.m-nav-link.active {
     color: var(--light);
+}
+.m-divider {
+    height: 2px;
+}
+.m-divider-primary{
+    background: var(--primary);
+}
+.m-divider-secondary {
+    background: var(--secondary);
+}
+.m-divider-success {
+    background: var(--success);
+}
+.m-divider-danger {
+    background: var(--danger);
+}
+.m-divider-warning {
+    background: var(--warning);
+}
+.m-divider-info {
+    background: var(--info);
+}
+.m-divider-light {
+    background: var(--light);
+}
+.m-divider-dark {
+    background: var(--dark);
+}
+.m-chip{
+    cursor: default;
 }

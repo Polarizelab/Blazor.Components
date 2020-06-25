@@ -1,0 +1,18 @@
+﻿<div class="rounded m-divider @GetStyleClass()"></div>
+
+@code {
+    [Parameter] public Style Style { get; set; } = Style.Primary;
+    private string GetStyleClass()
+    => Style switch
+    {
+        Style.Primary => "m-divider-primary",
+        Style.Secondary => "m-divider-secondary",
+        Style.Success => "m-divider-success",
+        Style.Danger => "m-divider-danger",
+        Style.Warning => "m-divider-warning",
+        Style.Info => "m-divider-info",
+        Style.Light => "m-divider-light",
+        Style.Dark => "m-divider-dark",
+        _ => string.Empty
+    };
+}

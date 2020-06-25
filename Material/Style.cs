@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Polarizelab.Blazor.Components.Material
 {
-    public enum ButtonStyle
+    public enum Style
     {
         Primary,
         Secondary,
@@ -14,6 +14,5 @@ namespace Polarizelab.Blazor.Components.Material
         Info,
         Light,
         Dark,
-        Link,
     }
 }
