@@ -5,44 +5,18 @@
 @import url("bootstrap.min.css");
 @import url("css/all.min.css");
 
-.btn-primary, .btn-outline-primary {
-    box-shadow: 0 19px 38px rgba(0, 123, 255, 0.3), 0 15px 12px rgba(0, 123, 255, 0.22);
+:root {
+    --secondary-light: rgba(108, 117, 125, 0.22);
 }
 
-.btn-secondary, .btn-outline-secondary {
-    box-shadow: 0 19px 38px rgba(108, 117, 125, 0.3), 0 15px 12px rgba(108, 117, 125, 0.22);
-}
-
-.btn-success, .btn-outline-success {
-    box-shadow: 0 19px 38px rgba(40, 167, 69, 0.3), 0 15px 12px rgba(40, 167, 69, 0.22);
-}
-
-.btn-danger, .btn-outline-danger {
-    box-shadow: 0 19px 38px rgba(220, 53, 69, 0.3), 0 15px 12px rgba(220, 53, 69, 0.22);
-}
-
-.btn-warning, .btn-outline-warning {
-    box-shadow: 0 19px 38px rgba(255, 193, 7, 0.3), 0 15px 12px rgba(255, 193, 7, 0.22);
-}
-
-.btn-info, .btn-outline-info {
-    box-shadow: 0 19px 38px rgba(23, 162, 184, 0.3), 0 15px 12px rgba(23, 162, 184, 0.22);
-}
-
-.btn-light, .btn-outline-light {
-    box-shadow: 0 19px 38px rgba(248, 249, 250, 0.3), 0 15px 12px rgba(248, 249, 250, 0.22);
-}
-
-.btn-dark, .btn-outline-dark {
-    box-shadow: 0 19px 38px rgba(52, 58, 64, 0.3), 0 15px 12px rgba(52, 58, 64, 0.22);
-}
-
-a.nav-link.active {
+a.nav-link.m-active {
     background-color: var(--primary);
 }
+
 .m-shadow-primary {
     box-shadow: 0 19px 38px rgba(0, 123, 255, 0.3), 0 15px 12px rgba(0, 123, 255, 0.22);
 }
+
 .m-shadow-dark {
     box-shadow: 0 19px 38px rgba(52, 58, 64, 0.3), 0 15px 12px rgba(52, 58, 64, 0.22);
 }
@@ -70,40 +44,106 @@ a.nav-link.active {
 .m-shadow-light {
     box-shadow: 0 19px 38px rgba(248, 249, 250, 0.3), 0 15px 12px rgba(248, 249, 250, 0.22);
 }
+
 a.m-nav-link {
     color: var(--dark);
 }
 
-a.m-nav-link.active {
-    color: var(--light);
+    a.m-nav-link.m-active {
+        color: var(--light);
+    }
+
+.m-nav-link:hover {
+    background-color: var(--light);
+    transition: 0.5s ease;
 }
+
 .m-divider {
     height: 2px;
 }
-.m-divider-primary{
+
+.m-divider-primary {
     background: var(--primary);
 }
+
 .m-divider-secondary {
     background: var(--secondary);
 }
+
 .m-divider-success {
     background: var(--success);
 }
+
 .m-divider-danger {
     background: var(--danger);
 }
+
 .m-divider-warning {
     background: var(--warning);
 }
+
 .m-divider-info {
     background: var(--info);
 }
+
 .m-divider-light {
     background: var(--light);
 }
+
 .m-divider-dark {
     background: var(--dark);
 }
-.m-chip{
+
+.m-chip {
     cursor: default;
 }
+
+.m-table {
+    border: 0;
+}
+
+    .m-table > thead > tr > th{
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 1px solid var(--secondary-light);
+        color: var(--primary);
+    }
+
+    .m-table > tbody > tr > td {
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 1px solid var(--secondary-light);
+        color: var(--primary);
+    }
+
+        .m-table > tbody > tr > td:first-child, .m-table > tbody > tr > td:last-child, .m-table > thead > tr > th:first-child, .m-table > thead > tr > th:last-child {
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+            border-bottom: 0;
+        }
+
+        .m-table > tbody > tr > td:first-child {
+            border-top: 0;
+            border-right: 0;
+            border-left: 2px solid transparent;
+            border-bottom: 0;
+        }
+
+    .m-table > tbody > tr:hover > td:first-child {
+        border-left: 2px solid var(--primary);
+    }
+
+    .m-table > tbody > tr:hover {
+        background-color: var(--light);
+    }
+
+    .m-table > tfoot > tr > th {
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 0;
+        color: var(--primary);
+    }

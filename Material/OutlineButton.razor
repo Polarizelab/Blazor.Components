@@ -4,14 +4,14 @@
     private string GetButtonTypeClass()
      => Style switch
      {
-         Style.Primary => "btn-outline-primary",
-         Style.Secondary => "btn-outline-secondary",
-         Style.Success => "btn-outline-success",
-         Style.Danger => "btn-outline-danger",
-         Style.Warning => "btn-outline-warning",
-         Style.Info => "btn-outline-info",
-         Style.Light => "btn-outline-light",
-         Style.Dark => "btn-outline-dark",
+         Style.Primary => "btn-outline-primary m-shadow-primary",
+         Style.Secondary => "btn-outline-secondary m-shadow-secondary",
+         Style.Success => "btn-outline-success m-shadow-success",
+         Style.Danger => "btn-outline-danger m-shadow-danger",
+         Style.Warning => "btn-outline-warning m-shadow-warning",
+         Style.Info => "btn-outline-info m-shadow-info",
+         Style.Light => "btn-outline-light m-shadow-light",
+         Style.Dark => "btn-outline-dark m-shadow-dark",
          _ => string.Empty
      };
 }

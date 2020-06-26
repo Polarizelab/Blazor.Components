@@ -4,14 +4,14 @@
     private string GetButtonTypeClass()
      => Style switch
      {
-         Style.Primary => "btn-primary",
-         Style.Secondary => "btn-secondary",
-         Style.Success => "btn-success",
-         Style.Danger => "btn-danger",
-         Style.Warning => "btn-warning",
-         Style.Info => "btn-info",
-         Style.Light => "btn-light",
-         Style.Dark => "btn-dark",
+         Style.Primary => "btn-primary m-shadow-primary",
+         Style.Secondary => "btn-secondarym-shadow-secondary",
+         Style.Success => "btn-success m-shadow-success",
+         Style.Danger => "btn-danger m-shadow-danger",
+         Style.Warning => "btn-warning m-shadow-warning",
+         Style.Info => "btn-info m-shadow-info",
+         Style.Light => "btn-light m-shadow-light",
+         Style.Dark => "btn-dark m-shadow-dark",
          _ => string.Empty
      };
 }

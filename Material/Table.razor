@@ -1,0 +1,46 @@
+﻿@typeparam T
+<table class="table table-bordered dataTable m-table @TableClass" width="100%" cellspacing="0" role="grid" style="width: 100%;">
+    <thead>
+        <tr role="row">
+            <th width="10px"></th>
+            @foreach (string item in Headers)
+            {
+                <th class="sorting" rowspan="1" colspan="1">@item</th>
+            }
+            <th width="10px"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Items)
+        {
+            <tr role="row">
+                <td width="10px"></td>
+                  @RowTemplate(item)
+                <td width="10px"></td>
+            </tr>
+        }
+        </tbody>
+
+    @if (HasFooter)
+    {
+        <tfoot>
+            <tr>
+                <th width="10px"></th>
+                @foreach (string item in Headers)
+                {
+                    <th rowspan="1" colspan="1">@item</th>
+                }
+                <th width="10px"></th>
+            </tr>
+        </tfoot>
+    }
+</table>
+
+@code {
+    [Parameter] public bool HasFooter { get; set; }
+    [Parameter] public string[] Headers { get; set; }
+    [Parameter] public RenderFragment<T> RowTemplate { get; set; }
+    [Parameter] public string TableClass { get; set; }
+    [Parameter]
+    public IEnumerable<T> Items { get; set; } = Enumerable.Empty<T>();
+}

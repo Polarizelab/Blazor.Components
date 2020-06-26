@@ -1,4 +1,4 @@
-﻿<div class="px-3 py-1 border rounded-pill text-center m-chip bg-white @GetStyleClass() @ChipClass @(IsSelected ? SelectedClass :string.Empty)" @onclick="@(()=> Select())">
+﻿<div class="px-3 py-1 border rounded-pill text-center m-chip @GetStyleClass() @ChipClass @(IsSelected ? SelectedClass : "bg-white")" @onclick="@(()=> Select())">
     @if (IsSelected)
     {
         @LeftIcon

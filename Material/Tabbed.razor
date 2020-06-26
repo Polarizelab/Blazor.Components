@@ -12,7 +12,7 @@
     [Parameter] public string TextClass { get; set; } = "m-nav-link";
     [Parameter] public IEnumerable<string> Tabs { get; set; }
     [Parameter] public EventCallback<string> SelectedTabChanged { get; set; }
-    [Parameter] public string ActiveClass { get; set; } = "active m-shadow-primary";
+    [Parameter] public string ActiveClass { get; set; } = "m-active m-shadow-primary";
     private void SelectTab(string tab)
     {
         if (SelectedTab == tab) return;
